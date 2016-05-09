@@ -1,5 +1,7 @@
 ZIP_FILE = GadgetronSketchBook.zip
 DOC_CONFIG = doc_config.doxy
+default:
+	true
 zip:
 	zip -r $(ZIP_FILE) libraries/*
 upload: docs
