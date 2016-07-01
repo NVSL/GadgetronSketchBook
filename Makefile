@@ -11,3 +11,4 @@ docs:
 clean:
 	rm -f $(ZIP_FILE)
 	rm -rf html/
+	rm -rf xml/
