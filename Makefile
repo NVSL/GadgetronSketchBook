@@ -1,13 +1,10 @@
 ZIP_FILE = GadgetronSketchBook.zip
 DOC_CONFIG = doc_config.doxy
-default:
-	true
-zip:
+zip: libraries/
 	zip -r $(ZIP_FILE) libraries/*
-upload: docs
-	scp -r html/ acsweb.ucsd.edu:public_html/secret/NVSL/
-docs:
-	doxygen $(DOC_CONFIG)
+libraries/:
+	true
+	make -C CreateDocs
 clean:
 	rm -f $(ZIP_FILE)
 	rm -rf html/
