@@ -1,7 +1,10 @@
 ZIP_FILE = GadgetronSketchBook.zip
 DOC_CONFIG = doc_config.doxy
+default:
+
 zip: libraries/
 	zip -r $(ZIP_FILE) libraries/*
+
 libraries/:
 	true
 	make -C CreateDocs
